@@ -1,0 +1,16 @@
+x = input("DIGITE UMA STRING PARA CODIFICAÇÂO(DIGITE EM MAIUSCULO) ")
+
+car = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+key = 3
+cover = ''
+for caractere in x:
+    if caractere in car:
+        z = car.find(caractere)
+    z = z + key
+    if z >= len(car):
+        z = z - len(car)
+    elif z < 0:
+        z = z + len(car)
+    cover = cover + car[z]
+    
+print("O TEXTO CRIPTOGRAFADO: ", cover)
